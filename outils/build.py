@@ -138,13 +138,18 @@ cont=f'''  <section class="ph vert"><div class="w">
     <img src="images/entretien.jpg" width="1408" height="768" alt="Jardin entretenu avec pelouse tondue, massifs fleuris et allée gravillonnée" style="border-radius:6px;aspect-ratio:3/2;object-fit:cover;width:100%"></div></section>
   <section class="band court terre"><div class="w formgrid">
     <div><h2 style="margin-bottom:24px">Décrivez votre demande</h2>
-      <form id="form" novalidate>
+      <form id="form" class="fcard" novalidate>
+        <p class="fintro">Les champs sont tous obligatoires.</p>
+        <div class="row">
         <label for="nom">Nom et prénom<input id="nom" name="nom" autocomplete="name" required aria-describedby="e-nom"><span class="err" id="e-nom" role="alert"></span></label>
         <label for="tel">Téléphone<input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="e-tel"><span class="err" id="e-tel" role="alert"></span></label>
+        </div>
+        <div class="row">
         <label for="mail">E-mail<input id="mail" name="mail" type="email" autocomplete="email" required aria-describedby="e-mail"><span class="err" id="e-mail" role="alert"></span></label>
         <label for="type">Type de travaux<select id="type" name="type" required aria-describedby="e-type"><option value="">Choisir…</option><option>Terrassement</option><option>Terrasse ou allée</option><option>Maçonnerie paysagère</option><option>Plantations, espaces verts</option><option>Entretien (tonte, taille, élagage)</option><option>Autre</option></select><span class="err" id="e-type" role="alert"></span></label>
+        </div>
         <label for="msg">Votre projet<textarea id="msg" name="msg" required aria-describedby="e-msg"></textarea><span class="err" id="e-msg" role="alert"></span></label>
-        <button class="btn" type="submit">Préparer ma demande</button>
+        <button class="btn big" type="submit">Préparer ma demande</button>
       </form></div>
     <div>
       <div class="recap" id="recap" hidden aria-live="polite">
